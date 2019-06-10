@@ -6,14 +6,14 @@ Based on Ubuntu LTS for maximum compatiblity.
 
 ## Building
 
-Following commands assume that your project source code is at the root of this repo.
+Following commands assume that your project source code is at `/src` of this repo.
 
 ```
 # build Docker image first
-docker build -t android-docker .
+docker build -f build/Dockerfile -t android-docker .
 
 # now build the Android project using Gradle wrapper
-docker run -it --rm -v $PWD:/home/build android-docker ./gradlew build
+docker run -it --rm -v $PWD/src:/root/build android-docker ./gradlew build
 ```
 
 After a successful build, all build artficats will be in their respective locations as if you built the project natively on your computer.

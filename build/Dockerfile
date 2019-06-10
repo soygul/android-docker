@@ -30,4 +30,4 @@ ENV CONTAINER=true \
     ANDROID_NDK_PATH=/root/ndk-bundle \
     ANDROID_NDK_ROOT=/root/ndk-bundle
 
-WORKDIR /home/build
+WORKDIR /root/build
