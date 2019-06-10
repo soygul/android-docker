@@ -1,9 +1,11 @@
 # https://hub.docker.com/_/ubuntu
 FROM ubuntu:18.04
 
+# build-essential: compilers etc.
+# devscripts: make command etc.
 # java jdk: android sdk tools require it
 RUN apt-get update && \
-    apt-get install -y openjdk-8-jdk
+    apt-get install -y build-essential devscripts openjdk-8-jdk
 
 # install android sdk
 ENV ANDROID_HOME=/root
