@@ -17,3 +17,11 @@ docker run -it --rm -v $PWD:/home/build android-docker ./gradlew build
 ```
 
 After a successful build, all build artficats will be in their respective locations as if you built the project natively on your computer.
+
+## Testing
+
+It's best to use a device farm to test your app on real devices, i.e. [Firebase Test Lab](https://firebase.google.com/docs/test-lab)
+However if you want to test your app in an emulator inside a container, check the following resources:
+
+* Ready to use Docker image for Android emulator: https://github.com/budtmo/docker-android
+* Native support for Android emulator inside containers is emerging (experimental): https://androidstudio.googleblog.com/2019/05/emulator-ci-docker-scripts-for-linux.html
