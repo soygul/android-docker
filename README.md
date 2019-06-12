@@ -6,7 +6,7 @@ Based on Ubuntu LTS for maximum compatiblity.
 
 ## Building
 
-Following commands assume that your project source code is at `/src` of this repo.
+Following commands assume that your project source code is at `/src` of this repo, and your project's Gradle wrapper executable is located at `/src/gradlew`.
 
 ```
 # build Docker image first
