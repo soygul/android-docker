@@ -13,7 +13,7 @@ Following commands assume that your project source code is at `/src` of this rep
 docker build -f build/Dockerfile -t android-docker .
 
 # now build the Android project using Gradle wrapper
-docker run -it --rm -v src:/root/build android-docker ./gradlew build
+docker run -it --rm -v $(pwd)/src:/root/build android-docker ./gradlew build
 ```
 
 After a successful build, all build artficats will be in their respective locations as if you built the project natively on your computer.
