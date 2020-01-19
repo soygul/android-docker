@@ -8,6 +8,7 @@ RUN apt-get update && \
     apt-get install -y build-essential devscripts openjdk-8-jdk
 
 # install android sdk
+# download URL: https://developer.android.com/studio#command-tools
 ENV ANDROID_HOME=/root
 ENV PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools
 RUN curl -L https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip -o sdktools.zip && \
@@ -18,7 +19,8 @@ RUN mkdir ~/.android && touch ~/.android/repositories.cfg && \
 
 # install android ndk
 # 'ndk-bundle' is the default directory name when NDK is installed through Android Studio so reusing that naming convention
-RUN curl -L https://dl.google.com/android/repository/android-ndk-r20-linux-x86_64.zip -o androidndk.zip && \
+# download URL: https://developer.android.com/ndk/downloads
+RUN curl -L https://dl.google.com/android/repository/android-ndk-r21-linux-x86_64.zip -o androidndk.zip && \
     unzip androidndk.zip -d /root && \
     rm androidndk.zip && \
     mv /root/android-ndk* /root/ndk-bundle

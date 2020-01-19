@@ -20,8 +20,8 @@ docker run -it --rm -v $(pwd)/src:/root/build android-docker ./gradlew build
 
 After a successful build, all build artficats will be in their respective locations as if you built the project natively on your computer.
 
-## Android and Build Tools Version
-By default, this image uses the latest version of Android SDK and Android Build Tools.
+## Android SDK/NDK and Build Tools Versions
+By default, this image uses the latest version of Android SDK/NDK and Android Build Tools.
 If you need a different versions, change them accordingly in the `Dockerfile` and rebuild the image using the commands given above.
 
 ## Testing
