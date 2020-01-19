@@ -4,25 +4,25 @@ Contains Android SDK and NDK.
 Based on Ubuntu LTS for maximum compatiblity.
 
 ## Building
-Following commands assume that your project source code is at `/src` directory of this repo, and your project's Gradle wrapper executable is located at `/src/gradlew`.
+Following commands assume that your project source code is at `/docker` directory of this repo, and your project's Gradle wrapper executable is located at `/build/gradlew`.
 
 Build the Docker image first:
 
 ```
-docker build -f build/Dockerfile -t android-docker .
+docker build -f docker/Dockerfile -t android-docker .
 ```
 
 Now build the Android project using Gradle wrapper:
 
 ```
-docker run -it --rm -v $(pwd)/src:/root/build android-docker ./gradlew build
+docker run -it --rm -v $(pwd)/build:/root/build android-docker ./gradlew build
 ```
 
 After a successful build, all build artficats will be in their respective locations as if you built the project natively on your computer.
 
 ## Android SDK/NDK and Build Tools Versions
 By default, this image uses the latest version of Android SDK/NDK and Android Build Tools.
-If you need a different versions, change them accordingly in the `Dockerfile` and rebuild the image using the commands given above.
+If you need a different versions, change them accordingly in the [Dockerfile](docker/Dockerfile) and rebuild the image using the commands given above.
 
 ## Testing
 It's best to use a device farm to test your app on real devices, i.e. [Firebase Test Lab](https://firebase.google.com/docs/test-lab)
@@ -32,7 +32,7 @@ However if you want to test your app in an emulator inside a container, check th
 * Native support for Android emulator inside containers is emerging (experimental): https://androidstudio.googleblog.com/2019/05/emulator-ci-docker-scripts-for-linux.html
 
 ## Security Note
-While building the image, Dockerfile scripts only have access to files residing in the `/build` directory for security reasons.
-If you need any file from `/src` directory during image build, you should copy them to `/build` directory.
+While building the image, Dockerfile scripts only have access to files residing in the `/docker` directory for security reasons.
+If you need any file from `/build` directory during image build, you should copy them to `/docker` directory.
 Note that this is only true during image building process.
-Running container will have full access to `/src` directory.
+Running container will have full access to `/build` directory.
