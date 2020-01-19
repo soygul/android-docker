@@ -3,19 +3,24 @@ Dockerfile for building Android projects inside a container.
 Contains Android SDK and NDK.
 Based on Ubuntu LTS for maximum compatiblity.
 
-## Building
-Following commands assume that your project source code is at `/docker` directory of this repo, and your project's Gradle wrapper executable is located at `/build/gradlew`.
+# Repos
+* GitHub Repo: https://github.com/soygul/android-docker
+* Docker Hub Repo: https://hub.docker.com/repository/docker/soygul/android-docker
 
-Build the Docker image first:
+## Building
+Following commands assume that your project source code is at `/build` directory of this repo, and your project's Gradle wrapper executable is located at `/build/gradlew`.
+Alternatively, you can adjust `$(pwd)/build` in the second command to point to your Android project source.
+
+Build the Docker image first. Skip this step if you want to use the Docker Hub image:
 
 ```
-docker build -f docker/Dockerfile -t android-docker .
+docker build -f docker/Dockerfile -t soygul/android-docker .
 ```
 
 Now build the Android project using Gradle wrapper:
 
 ```
-docker run -it --rm -v $(pwd)/build:/root/build android-docker ./gradlew build
+docker run -it --rm -v $(pwd)/build:/root/build soygul/android-docker ./gradlew build
 ```
 
 After a successful build, all build artficats will be in their respective locations as if you built the project natively on your computer.
