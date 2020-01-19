@@ -1,4 +1,5 @@
 # https://hub.docker.com/_/ubuntu
+# using this one intead of openjdk image, so we are in control of the Unbuntu base image
 FROM ubuntu:18.04
 
 # build-essential: compilers etc.
