@@ -14,7 +14,7 @@ RUN curl -L https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
     unzip sdktools.zip -d /root && \
     rm sdktools.zip
 RUN mkdir ~/.android && touch ~/.android/repositories.cfg && \
-    yes | sdkmanager "platform-tools" "build-tools;28.0.3" "platforms;android-28"
+    yes | sdkmanager "platform-tools" "build-tools;29.0.2" "platforms;android-29"
 
 # install android ndk
 # 'ndk-bundle' is the default directory name when NDK is installed through Android Studio so reusing that naming convention
