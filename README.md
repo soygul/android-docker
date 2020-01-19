@@ -6,13 +6,17 @@ Based on Ubuntu LTS for maximum compatiblity.
 
 ## Building
 
-Following commands assume that your project source code is at `/src` of this repo, and your project's Gradle wrapper executable is located at `/src/gradlew`.
+Following commands assume that your project source code is at `/src` directory of this repo, and your project's Gradle wrapper executable is located at `/src/gradlew`.
+
+Build the Docker image first:
 
 ```
-# build Docker image first
 docker build -f build/Dockerfile -t android-docker .
+```
 
-# now build the Android project using Gradle wrapper
+Now build the Android project using Gradle wrapper:
+
+```
 docker run -it --rm -v $(pwd)/src:/root/build android-docker ./gradlew build
 ```
 
