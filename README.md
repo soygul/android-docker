@@ -7,6 +7,11 @@ Based on Ubuntu LTS for maximum compatiblity.
 * GitHub Repo: https://github.com/soygul/android-docker
 * Docker Hub Repo: https://hub.docker.com/r/soygul/android-docker
 
+## Video Tutorial
+I did some of the development work of this project live for a YouTube tutorial.
+It also demonstrates how to use this project to build a sample Android app from source.
+If you want to see it, you can watch it here: [https://www.youtube.com/watch?v=wRAIY-RLSvo](https://www.youtube.com/watch?v=wRAIY-RLSvo)
+
 ## Building
 Following commands assume that your project source code is at `/build` directory of this repo, and your project's Gradle wrapper executable is located at `/build/gradlew`.
 Alternatively, you can adjust `$(pwd)/build` in the second command to point to your Android project source.
