@@ -8,7 +8,7 @@ Based on Ubuntu LTS for maximum compatiblity.
 * Docker Hub Repo: https://hub.docker.com/r/soygul/android-docker
 
 ## Video Tutorial
-I did some of the development work of this project live for a YouTube tutorial.
+I did some of the development work of this project live for a YouTube tutorial on how to use GitHub for open source projects.
 It also demonstrates how to use this project to build a sample Android app from source.
 If you want to see it, you can watch it here: [https://www.youtube.com/watch?v=wRAIY-RLSvo](https://www.youtube.com/watch?v=wRAIY-RLSvo)
 
