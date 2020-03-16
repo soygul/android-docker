@@ -3,7 +3,7 @@ Dockerfile for building Android projects inside a container.
 Contains Android SDK and NDK.
 Based on Ubuntu LTS for maximum compatiblity.
 
-# Repos
+## Repos
 * GitHub Repo: https://github.com/soygul/android-docker
 * Docker Hub Repo: https://hub.docker.com/r/soygul/android-docker
 
